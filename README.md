@@ -3,10 +3,10 @@
 The model is based on pytorch.
 Install the Pytorch according to the system and nvidia toolkit.
 
-Please find image2products.json file with image name and number of product in it. The dict containing an entry for every shelf image in the test set with
+image2products.json file with image name and number of product in it. The dict containing an entry for every shelf image in the test set with
 image name as ‘key’ and number of products present in it as ‘value’ .
 
-metrics.json  for the mAP,  precision and recall. Actually I could not find annotation for the test images so I divide the train in two sets train and validation set. Therefore the mAP,  precision and recall are calucated using the validation set.
+metrics.json  for the mAP,  precision and recall. 
 
 #Data Preperation
 
@@ -45,8 +45,8 @@ According to the SSD paper.
 There are a total of 8732 priors defined for the SSD300!
 
 
-According to the problem statement given to implement a single shot object
-detector with only “one” anchor box per feature-map cell .
+
+Detection with only “one” anchor box per feature-map cell .
 
 I made the required changes.
 
