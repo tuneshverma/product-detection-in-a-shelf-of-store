@@ -194,10 +194,3 @@ Then, you can use the `detect()` function to identify and visualize objects in a
 
 This function first **preprocesses the image by resizing and normalizing its RGB channels** as required by the model. It then **obtains raw predictions from the model, which are parsed** by the `detect_objects()` method in the model. The parsed results are converted from fractional to absolute boundary coordinates, their labels are decoded with the `label_map`, and they are **visualized on the image**.
 
-What is the purpose of using multiple anchors per feature map cell?
-
-Answer - In SSD algorithim we get some feature maps from low and high level after appying convolution layers. Multiple anchor per feature map cell are boxes of different aspect ratio. As we know in objects detection problem an image can have multiple objects of different size and shape. To predict bounding boxes for objects of different sizes and shape from a feature map cell we define some box with different aspect ratio. We calulate IOU from ground truth boxes and all the aspect ratio boxes and chose box with highest IOU and confidence score.
- 
-Does this problem require multiple anchors? Please justify your answer.
-
-Answer - We don't require multiple anchor for this problem because here we have only one object class which have almost same aspect ratio through out the dataset. So single box of certain aspect ratio from all the different feature map cell can be used to for training.
