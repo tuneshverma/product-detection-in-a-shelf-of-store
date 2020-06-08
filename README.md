@@ -52,12 +52,12 @@ I made the required changes.
 
 | Feature Map From | Feature Map Dimensions | Prior Scale | Aspect Ratios | Number of Priors per Position | Total Number of Priors on this Feature Map |
 | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
-| `conv4_3`      | 38, 38       | 2:1 | 1 | 1444 |
-| `conv7`      | 19, 19       | 2:1| 1 | 361 |
-| `conv8_2`      | 10, 10       | 2:1 | 1 | 100 |
-| `conv9_2`      | 5, 5       | 2:1| 1 | 25 |
-| `conv10_2`      | 3,  3       | 2:1| 1 | 9 |
-| `conv11_2`      | 1, 1       | 2:1 | 1 | 1 |
+| `conv4_3`      | 38, 38       |0.1| 2:1 | 1 | 1444 |
+| `conv7`      | 19, 19       |0.1| 2:1| 1 | 361 |
+| `conv8_2`      | 10, 10       |0.1| 2:1 | 1 | 100 |
+| `conv9_2`      | 5, 5       |0.1| 2:1| 1 | 25 |
+| `conv10_2`      | 3,  3       |0.1| 2:1| 1 | 9 |
+| `conv11_2`      | 1, 1       |0.1| 2:1 | 1 | 1 |
 | **Grand Total**      |    –    | – | – | – | **1940 priors** |
 
 So it was asked to inplement the detector with only one anchor box(prior box) per feature map cell. Accordingly I made the changes and as shown in the table above the total number of anchor boxes are 1940.
